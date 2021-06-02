@@ -87,8 +87,6 @@ $showPosts->execute();
 
 <?php include("inc/header.php"); ?>
 
-<!-- This is an example component -->
-
 <div class="h-full md:px-32 px-4 mx-auto">
  
   <div class="border-b-2 block grid md:grid-cols-4 grid-cols-1 mb-6">
@@ -151,9 +149,10 @@ $showPosts->execute();
   <h1 class="font-bold text-2xl">My posts:</h1>
   <?php
   while($posts = $showPosts->fetch(PDO::FETCH_ASSOC)){
-      $postId = $posts['id'];
+      $postId = $posts['post_id'];
       $postImg = $posts['feat_image'];
       $postTitle = $posts['title'];
+      $userId = $posts['user_id'];
   ?>
     <div class="w-full bg-white shadow-md flex mt-2 justify-between">
 
@@ -165,9 +164,9 @@ $showPosts->execute();
     </div>
 
     <div class="p-4 self-center">
-    <a href="view.php?id=<?php echo $postId ?>" class="text-md hover:underline text-black hover:text-blue-dark ml-2 px-1">View</a>
-    <a href="#" class="text-md hover:underline text-grey-darker hover:text-blue-dark ml-2 px-1">Edit</a>
-    <a href="#" class="text-md hover:underline text-grey-darker hover:text-blue-dark ml-2 px-1">Delete</a>
+    <a href="view.php?id=<?php echo $postId ?>&user=<?php echo $userId ?>" class="text-md hover:underline text-black hover:text-blue-dark ml-2 px-1">View</a>
+    <a href="edit.php?id=<?php echo $postId ?>" class="text-md hover:underline text-grey-darker hover:text-blue-dark ml-2 px-1">Edit</a>
+    <a href="delete.php?id=<?php echo $postId ?>" class="text-md hover:underline text-grey-darker hover:text-blue-dark ml-2 px-1">Delete</a>
    </div>
     </div>
   <?php } ?>
