@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Circular Book";
+  src: url("../fonts/Circular\ Std\ Book/Circular Std Book.woff2")
+    format("woff2"); /* Super Modern Browsers */
+}
+
+@font-face {
+  font-family: "Circular Medium";
+  src: url("../fonts/Circular\ Std\ Medium/Circular Std Medium.woff2")
+    format("woff2"); /* Super Modern Browsers */
+}
+
+@font-face {
+  font-family: "Circular Bold";
+  src: url("../fonts/Circular\ Std\ Medium/Circular Std Bold.woff2")
+    format("woff2"); /* Super Modern Browsers */
+}
+
+body {
+  background-color: #e5e7eb;
+  font-family: "Circular Book", sans-serif;
+  color: black;
+}
+
+.bg-teal-500 {
+  background-color: #38b2ac;
+}
+
+@keyframes shake {
+  0% {
+    transform: skewX(-15deg);
+  }
+  5% {
+    transform: skewX(15deg);
+  }
+  10% {
+    transform: skewX(-15deg);
+  }
+  15% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(0deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
