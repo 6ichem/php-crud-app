@@ -165,7 +165,7 @@ $showPosts->execute();
     </div>
 
     <div class="p-4 self-center">
-    <a href="#" class="text-md hover:underline text-black hover:text-blue-dark ml-2 px-1">View</a>
+    <a href="view.php?id=<?php echo $postId ?>" class="text-md hover:underline text-black hover:text-blue-dark ml-2 px-1">View</a>
     <a href="#" class="text-md hover:underline text-grey-darker hover:text-blue-dark ml-2 px-1">Edit</a>
     <a href="#" class="text-md hover:underline text-grey-darker hover:text-blue-dark ml-2 px-1">Delete</a>
    </div>
